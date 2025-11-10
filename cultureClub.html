@@ -8,13 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+
 <body class="poppins-regular">
-        <header class="header">
+     <!-- Login Modal / Section -->
+      <section id="login-section" style="display:none;">
+      <div class="login-container">
+         <h2 style="text-align:center;">Login</h2>
+         <form id="loginForm">
+            <label for="club-id">Student iD:</label>
+            <input type="text" id="club-id" name="club-id" placeholder="Enter your student id" required>
+
+            <label for="club-pass">Password:</label>
+            <input type="password" id="club-pass" name="club-pass" placeholder="Enter your password" required>
+
+            <label for="club-type">Select Club:</label>
+            <select id="club-type" required>
+            <option value="">--Select--</option>
+            <option value="sports">Sports Club</option>
+            <option value="culture">Culture Club</option>
+            </select>
+
+            <button type="submit" class="btn-primary">Login</button>
+            <button type="button" id="login-close" class="btn-secondary">Cancel</button>
+         </form>
+      </div>
+      </section>
+      <header class="header">
             <nav class="navbar">
                  <h3 class="nav-title"><img src="assest/Culture Club BG RMV.png" alt="" width="160px"></h3>
                  <ul class="navitems">
-                     <li class="navitem"><a href="" class="navlink">Home</a></li>
-                     <li class="navitem"><a href="" class="navlink">Log In</a></li>
+                     <li class="navitem"><a href="index.html" class="navlink">Home</a></li>
+                     <li class="navitem"><a href="" class="navlink">Login</a></li>
                  </ul>
             </nav>
             <!-- banner start -->
@@ -39,6 +63,38 @@
                       </div>
                   </div>
             </section>
+            <!-- Hidden Explore More Section (under banner, above logos) -->
+            <section id="explore-more" style="display:none; padding: 40px; background-color: #f5f5f5;">
+               <h2 style="text-align:center;">Gallery, Achievements & Documents</h2>
+               
+               <!-- Gallery -->
+               <div class="gallery" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+                  <img src="images/gallery1.jpg" alt="Gallery 1" style="width:200px; height:150px; object-fit:cover; border-radius:5px;">
+                  <img src="images/gallery2.jpg" alt="Gallery 2" style="width:200px; height:150px; object-fit:cover; border-radius:5px;">
+                  <img src="images/gallery3.jpg" alt="Gallery 3" style="width:200px; height:150px; object-fit:cover; border-radius:5px;">
+               </div>
+
+               <!-- Achievements -->
+               <div class="achievements" style="margin-top:30px; text-align:center;">
+                  <h3>Our Achievements</h3>
+                  <ul style="list-style-type:circle; display:inline-block; text-align:left;">
+                        <li>Inter-university Football Champions 2024</li>
+                        <li>Best Sports Club Award 2023</li>
+                        <li>Organized 10+ Successful Tournaments</li>
+                  </ul>
+               </div>
+
+               <!-- Documents -->
+               <div class="documents" style="margin-top:30px; text-align:center;">
+                  <h3>Documents</h3>
+                  <ul style="list-style-type: none; padding-left:0;">
+                        <li><a href="docs/club_rulebook.pdf" target="_blank">Club Rulebook</a></li>
+                        <li><a href="docs/annual_report.pdf" target="_blank">Annual Report</a></li>
+                        <li><a href="docs/event_schedule.pdf" target="_blank">Event Schedule</a></li>
+                  </ul>
+               </div>
+            </section>
+            <!-- logo section -->
            <section class="logos">
                <div class="logo-contianer">
                   <div class="logo"><img src="logos/Alibaba.svg" alt="Alibaba" class="logo-img"></div>
@@ -56,12 +112,12 @@
 
         <main>
             <!-- panel member section which name was popular-collection -->
-             <section class="popular-collection">
+              <section class="popular-collection">
                      <h3 class="section-title">Panel Members</h3>
                     
                      <div class="card-container">
                           <div class="card">
-                            <img src="images/SportClub prasident.jpg" alt="" class="card-img">
+                            <img src="images/SportClub prasident.jpg"alt="prisident_pic" class="card-img">
                              <h3 class="card-title">President</h3>
                              <h4 class="card-price">
                                 Shahriar Abidin Abir
@@ -74,23 +130,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
-                                    <p class="rate">9th semister</p>
-                                </div>
+                                <!-- <div class="rating">
+                                    <p class="rate">8th semister</p>
+                                </div> -->
                              </div>
                              <p class="card-discription">
                                 Computer Science and Engineering
                                 <br>
-                                available
+                                8th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:01234567810
                              </p>
                           </div>
                           <div class="card">
-                            <img src="images/mic.png" alt="" class="card-img">
-                             <h3 class="card-title"> microphone</h3>
+                            <img src="images/Tushar Vhai .jpg" alt="" class="card-img">
+                             <h3 class="card-title">General Secretary </h3>
                              <h4 class="card-price">
-                               $120.25
+                                Naeem Hasan Tusher
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -100,23 +156,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
-                                    <p class="rate">4.99</p>
-                                </div>
+                                <!-- <div class="rating">
+                                    <p class="rate">7th semister</p>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                                 Wordwide shifting 
+                                  Computer Science and Engineering
                                 <br>
-                                available
+                                7th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:12345678910
                              </p>
                           </div>
                           <div class="card">
-                            <img src="images/airpod.png" alt="" class="card-img">
-                             <h3 class="card-title">Airbuds</h3>
+                            <img src="images/Keka .jpg" alt="" class="card-img">
+                             <h3 class="card-title">Vice President</h3>
                              <h4 class="card-price">
-                                $100.00
+                                Kyaw Kyaw Saing Marma
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -126,23 +182,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
+                                <!-- <div class="rating">
                                     <p class="rate">4.99</p>
-                                </div>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                                Wordwide shifting 
+                                English
                                 <br>
-                                available
+                                8th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:12345678910
                              </p>
                           </div>
-                          <div class="card">
-                            <img src="images/drone.png" alt="" class="card-img">
-                             <h3 class="card-title">Drone</h3>
+                         <div class="card">
+                            <img src="images/Nahid mojumdar .jpg" alt="" class="card-img">
+                             <h3 class="card-title">Vice President</h3>
                              <h4 class="card-price">
-                               $980.25
+                                  Nahid Mojumdar 
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -152,23 +208,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
+                                <!-- <div class="rating">
                                     <p class="rate">4.99</p>
-                                </div>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                                Wordwide shifting 
+                                LAW
                                 <br>
-                                available
+                                7th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:12345678910
                              </p>
                           </div>
                           <div class="card">
-                            <img src="images/lights.png" alt="" class="card-img">
-                             <h3 class="card-title">Light Setup</h3>
+                            <img src="images/Kamrul.jpg" alt="" class="card-img">
+                             <h3 class="card-title">Joint Secretary</h3>
                              <h4 class="card-price">
-                                $1200.00
+                                Kamrul Hossain
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -178,23 +234,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
+                                <!-- <div class="rating">
                                     <p class="rate">4.99</p>
-                                </div>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                               Wordwide shifting 
+                                LAW
                                 <br>
-                                available
+                                6th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:12345678910
                              </p>
                           </div>
                           <div class="card">
-                            <img src="images/setup.png" alt="" class="card-img">
-                             <h3 class="card-title"> Photoshoot set</h3>
+                            <img src="images/Rihan .jpg" alt="" class="card-img">
+                             <h3 class="card-title">Joint Secretary</h3>
                              <h4 class="card-price">
-                                $50.48
+                                Kazi Shafiur Rahan 
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -204,23 +260,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
+                                <!-- <div class="rating">
                                     <p class="rate">4.99</p>
-                                </div>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                                Wordwide shifting 
+                                Computer Science and Engineering
                                 <br>
-                                available
+                                6th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:12345678910
                              </p>
                           </div>
                           <div class="card">
-                            <img src="images/tripod.png" alt="" class="card-img">
-                             <h3 class="card-title">Vlogging Camera</h3>
+                            <img src="images/Maruf Hossain.jpg" alt="" class="card-img">
+                             <h3 class="card-title">Financial Secretary</h3>
                              <h4 class="card-price">
-                                $1800.80
+                                Kazi Maruf Hossain 
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -230,23 +286,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
+                                <!-- <div class="rating">
                                     <p class="rate">4.99</p>
-                                </div>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                                 Wordwide shifting 
+                                Computer Science and Engineering
                                 <br>
-                                available
+                                6th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:12345678910
                              </p>
                           </div>
                           <div class="card">
-                            <img src="images/single-light.png" alt="" class="card-img">
-                             <h3 class="card-title">Green Screen</h3>
+                            <img src="images/Samrat.jpg" alt="" class="card-img">
+                             <h3 class="card-title"> Deputy Financial Secretary</h3>
                              <h4 class="card-price">
-                                $25.48
+                                ChinkPank Samrat
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -256,23 +312,23 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
+                                <!-- <div class="rating">
                                     <p class="rate">4.99</p>
-                                </div>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                                Wordwide shifting 
+                                 Computer Science and Engineering
                                 <br>
-                                available
-                                 <br>
-                                Buyers protection possible!
+                                4th semister
+                                <br>
+                                Contact:12345678910
                              </p>
                           </div>
                           <div class="card">
-                            <img src="images/action.png" alt="" class="card-img">
-                             <h3 class="card-title">Action Camera</h3>
+                            <img src="images/Keka .jpg" alt="" class="card-img">
+                             <h3 class="card-title">Vice President</h3>
                              <h4 class="card-price">
-                                $50.48
+                                Kyaw Kyaw Saing Marma
                              </h4>
                              <div class="card-rating">
                                 <div class="card-icon">
@@ -282,16 +338,16 @@
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                      <img src="logos/icon-star.png" alt="" class="star-con">
                                 </div>
-                                <div class="rating">
+                                <!-- <div class="rating">
                                     <p class="rate">4.99</p>
-                                </div>
+                                </div> -->
                              </div>
                              <p class="card-discription">
-                                Wordwide shifting 
+                                English
                                 <br>
-                                available
+                                8th semister
                                 <br>
-                                Buyers protection possible!
+                                Contact:12345678910
                              </p>
                           </div>
                      </div>
@@ -370,6 +426,33 @@
         </footer>
         <!-- js part -->
         <script src="scripts/joinForm.js"></script>
+        <script src="scripts/login.js"></script>
+         <script>
+      // Explore More Button
+      const exploreBtn = document.querySelector('.banner-container .btn-primary');
+      const exploreSection = document.getElementById('explore-more');
+
+      exploreBtn.addEventListener('click', () => {
+         // Show the section
+         exploreSection.style.display = 'block';
+         // Smooth scroll to it
+         exploreSection.scrollIntoView({ behavior: 'smooth' });
+      });
+       </script>
+        <!-- JS: Toggle Explore More Section -->
+            <script>
+            const exploreBtn = document.querySelector('.banner-container .btn-primary');
+            const exploreSection = document.getElementById('explore-more');
+
+            exploreBtn.addEventListener('click', () => {
+               if(exploreSection.style.display === 'none' || exploreSection.style.display === '') {
+                  exploreSection.style.display = 'block';
+                  exploreSection.scrollIntoView({ behavior: 'smooth' });
+               } else {
+                  exploreSection.style.display = 'none';
+               }
+            });
+            </script>
 
 </body>
 </html>
