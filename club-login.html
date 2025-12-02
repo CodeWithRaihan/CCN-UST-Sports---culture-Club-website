@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sports Club Admin Panel</title>
+<style>
+    body { font-family: Arial; margin: 0; background:#f2f2f2; }
+
+    /* Login Section */
+    #login-section {
+        width: 350px;
+        margin: 80px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        display: block;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        background: royalblue;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover { background:#0038b3; }
+
+    /* Dashboard */
+    #dashboard {
+        display: none;
+        padding: 20px;
+    }
+
+    .box {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    h2 { margin-top: 0; }
+
+</style>
+</head>
+<body>
+
+<!-- LOGIN SECTION -->
+<section id="login-section">
+    <h2 style="text-align:center;">Sports Club Login</h2>
+
+    <label>Student ID:</label>
+    <input type="text" id="club-id" placeholder="Enter ID">
+
+    <label>Password:</label>
+    <input type="password" id="club-pass" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button>
+</section>
+
+
+
+<!-- DASHBOARD SECTION -->
+<section id="dashboard">
+
+    <h2>Admin Dashboard</h2>
+
+    <!-- ADD MEMBER -->
+    <div class="box">
+        <h3>Add Member</h3>
+        <input type="text" id="newMemberName" placeholder="Enter member name">
+        <button onclick="addMember()">Add Member</button>
+        <p id="memberMessage" style="color:green;"></p>
+    </div>
+
+    <!-- DELETE MEMBER -->
+    <div class="box">
+        <h3>Delete Member</h3>
+        <input type="text" id="deleteMemberName" placeholder="Enter member name">
+        <button onclick="deleteMember()">Delete Member</button>
+        <p id="deleteMessage" style="color:red;"></p>
+    </div>
+
+    <!-- PHOTO UPLOAD -->
+    <div class="box">
+        <h3>Upload Photo</h3>
+        <input type="file" id="photoUpload">
+        <button onclick="uploadPhoto()">Upload Photo</button>
+        <p id="photoMsg" style="color:green;"></p>
+    </div>
+
+    <!-- VIDEO UPLOAD -->
+    <div class="box">
+        <h3>Upload Video</h3>
+        <input type="file" id="videoUpload">
+        <button onclick="uploadVideo()">Upload Video</button>
+        <p id="videoMsg" style="color:green;"></p>
+    </div>
+
+    <!-- Notice -->
+    <div class="box">
+        <h3>Post Notice</h3>
+        <input type="text" id="noticeText" placeholder="Write notice">
+        <button onclick="postNotice()">Post Notice</button>
+        <p id="noticeMsg" style="color:blue;"></p>
+    </div>
+
+</section>
+
+
+<script>
+/* SIMPLE LOGIN SYSTEM (No Database Needed) */
+function login(){
+    const id = document.getElementById("club-id").value;
+    const pass = document.getElementById("club-pass").value;
+
+    if(id === "admin" && pass === "1234"){
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+    } else {
+        alert("❌ Wrong ID or Password!");
+    }
+}
+
+/* ADD MEMBER */
+function addMember(){
+    let name = document.getElementById("newMemberName").value;
+    if(name === "") return alert("Enter name!");
+
+    document.getElementById("memberMessage").innerText = name + " added successfully!";
+}
+
+/* DELETE MEMBER */
+function deleteMember(){
+    let name = document.getElementById("deleteMemberName").value;
+    if(name === "") return alert("Enter name!");
+
+    document.getElementById("deleteMessage").innerText = name + " deleted!";
+}
+
+/* PHOTO UPLOAD */
+function uploadPhoto(){
+    document.getElementById("photoMsg").innerText = "Photo uploaded!";
+}
+
+/* VIDEO UPLOAD */
+function uploadVideo(){
+    document.getElementById("videoMsg").innerText = "Video uploaded!";
+}
+
+/* NOTICE */
+function postNotice(){
+    let text = document.getElementById("noticeText").value;
+    if(text === "") return alert("Write something!");
+
+    document.getElementById("noticeMsg").innerText = "Notice posted!";
+}
+</script>
+
+</body>
+</html>
